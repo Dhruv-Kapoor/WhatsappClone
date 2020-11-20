@@ -59,7 +59,7 @@ class ChatsFragment : Fragment() {
                 }
             })
 
-        chatsLiveData.observe(this, Observer {
+        chatsLiveData.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
 

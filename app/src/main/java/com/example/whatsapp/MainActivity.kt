@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menuSearch->{
-
+                //TODO
             }
             R.id.menuSettings->{
                 GlobalScope.launch(Dispatchers.IO) {

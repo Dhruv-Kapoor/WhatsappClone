@@ -13,7 +13,7 @@ interface ChatsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addChat(chat: Chat)
 
-    @Query("select * from Chat")
+    @Query("select * from Chat order by time desc")
     fun getAllChats(): DataSource.Factory<Int, Chat>
 
     @Query("update Chat set unreadCount = :unreadCount where uid == :uid")
